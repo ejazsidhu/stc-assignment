@@ -1,0 +1,27 @@
+/* product-list.component.scss */
+
+.product-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .product-card mat-card {
+    width: 300px;
+    text-align: left;
+  }
+  
+  .product-image {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 16px;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
