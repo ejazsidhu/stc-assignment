@@ -12,6 +12,10 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
+    path:'sign-in',
+    component:LoginComponent
+  },
+  {
     path:'admin',
     component:AdminBaseComponent,
     children:[

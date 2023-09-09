@@ -5,7 +5,8 @@ import { AdminBaseComponent } from './pages/admin/admin-base/admin-base.componen
 import { ProductListingComponent } from './pages/admin/product/product-listing/product-listing.component';
 import { ProductAddEditComponent } from './pages/admin/product/product-add-edit/product-add-edit.component';
 import { AuthRoutingModule } from './auth-routing.module';
-
+import { MaterialCoreModule } from '../modules/material-core/material-core.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { AuthRoutingModule } from './auth-routing.module';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    MaterialCoreModule,
+    ReactiveFormsModule    
   ]
 })
 export class AuthModule { }
