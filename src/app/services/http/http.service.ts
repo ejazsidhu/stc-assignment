@@ -10,7 +10,10 @@ export class HttpService {
 
   constructor(private http:HttpClient) { }
 
-  public GET(Url:string):Observable<Product[]>{
-    return this.http.get<Product[]>(Url);
+  public GET(url:string):Observable<Product[]>{
+    return this.http.get<Product[]>(url);
+  }
+  public DELETE(url:string):Observable<Product>{
+    return this.http.delete<Product>(url);
   }
 }

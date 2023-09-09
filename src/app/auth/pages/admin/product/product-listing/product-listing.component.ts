@@ -48,8 +48,13 @@ export class ProductListingComponent {
     console.log(element)
   }
 
-  deleteProduct(element: Product) {
-    console.log(element)
+  deleteProduct(product: Product) {
+    let url = `${this.serverUrl}products/${product.id}`;
+    this.httpService.DELETE(url).subscribe((response:Product)=>{
+      console.log(response);
+      this.products=this.products.filter(p=>p.id !== product.id);
+      this.dataSource = new MatTableDataSource(this.products);
+    })
   }
 
   constructor(private httpService: HttpService, private utilityService: UtilityService) {
