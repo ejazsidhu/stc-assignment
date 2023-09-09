@@ -1,30 +1,57 @@
-product-list.component.html
+<div class="container">
+  <div class="row">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Product Listing</mat-card-title>
+      </mat-card-header>
 
-<mat-card>
-    <mat-card-header>
-      <mat-card-title>Product Listing</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <!-- Add a product grid or list here -->
-      <!-- Example: -->
-      <div class="product-card" >
-        <mat-card *ngFor="let product of products">
-          <mat-card-header>
-            <div mat-card-avatar class="product-image">
-              <img [src]="product.imageUrl" alt="{{ product.name }}">
-            </div>
-            <mat-card-title>{{ product.name }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>{{ product.description }}</p>
-            <p>Price: ${{ product.price }}</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button color="primary">Add to Cart</button>
-          </mat-card-actions>
-        </mat-card>
+      <div class="row mt-3 text-end">
+        <form>
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              placeholder="Serach Product Here..."
+              [formControl]="searchControl"
+            />
+          </mat-form-field>
+        </form>
       </div>
-      <!-- End of product grid/list -->
-    </mat-card-content>
-  </mat-card>
-  
+      <mat-card-content>
+        <!-- Add a product grid or list here -->
+        <!-- Example: -->
+        <div class="product-card">
+          <mat-card
+            *ngFor="let product of products"
+            class="shadow p-3 mb-5 bg-white"
+          >
+            <mat-card-header>
+              <div mat-card-avatar class="product-image">
+                <img [src]="product.image" alt="{{ product.title }}" />
+              </div>
+              <mat-card-title>{{
+                product.title | slice : 0 : 20
+              }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>{{ product.description | slice : 0 : 20 }}...</p>
+              <p>Price: ${{ product.price }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="primary">Details</button>
+            </mat-card-actions>
+          </mat-card>
+<!-- 
+          <mat-paginator
+            [length]="100"
+            [pageSize]="10"
+            [pageSizeOptions]="[5, 10, 25, 100]"
+            aria-label="Select page"
+          >
+          </mat-paginator> -->
+        </div>
+        <!-- End of product grid/list -->
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

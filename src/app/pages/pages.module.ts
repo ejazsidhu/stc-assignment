@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PageBaseComponent } from './page-base/page-base.component';
 import { MaterialCoreModule } from '../modules/material-core/material-core.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { MaterialCoreModule } from '../modules/material-core/material-core.modul
   imports: [
     CommonModule,
     PagesRoutingModule,
-    MaterialCoreModule
+    MaterialCoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }

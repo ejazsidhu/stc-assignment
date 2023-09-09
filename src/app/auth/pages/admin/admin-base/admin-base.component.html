@@ -1,4 +1,26 @@
 <!-- <p>admin-base works!</p> -->
-<div class="bg-fill-color">
-    <router-outlet></router-outlet>
+<div class="container">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="/auth/admin/">Admin Dashboard</a>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/auth/admin/">Products</a>
+              </li>
+           
+            </ul>
+         
+          </div>
+        </div>
+      </nav>
+  </div>
+  <div class="row">
+  
+    <div class="col-sm-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
