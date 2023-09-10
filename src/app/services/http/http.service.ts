@@ -10,10 +10,28 @@ export class HttpService {
 
   constructor(private http:HttpClient) { }
 
-  public GET(url:string):Observable<Product[]>{
+  public getProducts(url:string):Observable<Product[]>{
     return this.http.get<Product[]>(url);
   }
-  public DELETE(url:string):Observable<Product>{
+
+  public getSingleProducts(url:string):Observable<Product>{
+    return this.http.get<Product>(url);
+  }
+
+  public addNewProduct(url:string,body:Product):Observable<Product>{
+    return this.http.post<Product>(url,body);
+  }
+
+  public updateProduct(url:string,body:Product):Observable<Product>{
+    return this.http.put<Product>(url,body);
+  }
+
+  public getCategories(url:string){
+    return this.http.get(url);
+  }
+
+  public deleteProduct(url:string):Observable<Product>{
     return this.http.delete<Product>(url);
   }
+
 }

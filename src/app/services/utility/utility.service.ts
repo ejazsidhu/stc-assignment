@@ -8,13 +8,22 @@ export class UtilityService {
 
   constructor() { }
 
-  searchProducts(query: string,products:Product[]): Product[] {
+  searchProducts(query: string,products:Product[],serachByField:string = 'product'): Product[] {
     const lowercaseQuery = query.toLowerCase();
   
-    return products.filter((product) => {
-      const lowercaseName = product.title.toLowerCase();
-      const lowercaseDescription = product.description.toLowerCase();
-      return lowercaseName.includes(lowercaseQuery) || lowercaseDescription.includes(lowercaseQuery);
-    });
+    if(serachByField === 'product'){
+      return products.filter((product) => {
+        const lowercaseName = product.title.toLowerCase();
+        const lowercaseDescription = product.description.toLowerCase();
+        return lowercaseName.includes(lowercaseQuery) || lowercaseDescription.includes(lowercaseQuery);
+      });
+  
+    }
+    else{
+      return products.filter((product) => {
+        const lowercaseName = product.category.toLowerCase();
+        return lowercaseName.includes(lowercaseQuery);
+      });
+    }
   }
 }
