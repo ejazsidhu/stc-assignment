@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
 import { Product } from 'src/app/interfaces/products.interface';
+import { Store } from 'src/app/interfaces/store.interface';
 import { HttpService } from 'src/app/services/http/http.service';
+import { StoreService } from 'src/app/services/store/store.service';
 import { UtilityService } from 'src/app/services/utility/utility.service';
 import { Enviroment } from 'src/enviroemtns';
 
@@ -21,8 +24,14 @@ export class PageBaseComponent {
   subscription: Subscription;
   categories: string[];
   loading: boolean = false;
+  _store:Store
 
-  constructor(private httpService: HttpService, private utilityService: UtilityService) {
+  constructor(private httpService: HttpService, private utilityService: UtilityService, private store:StoreService, private router:Router) {
+
+    console.log('store value', this.store.getState())
+    this._store = this.store.getState();
+    // if(this._store.username === '')
+    // this.router.navigate(['/'])
 
     this.searchSubscription = this.searchControl.valueChanges
       .pipe(
@@ -45,12 +54,11 @@ export class PageBaseComponent {
     this.searchCaterogry = '';
     this.getProducts();
   }
+
   searchByCategory() {
     console.log(this.searchCaterogry)
     this.getProducts();
-
   }
-
 
   getProducts() {
     this.loading = true;
@@ -70,6 +78,12 @@ export class PageBaseComponent {
       console.log('category', response)
       this.categories = response as string[];
     })
+  }
+
+  signOut(){
+    this.store.setState({username:'',password:'',role:''});
+    this._store = this.store.getState();
+
   }
 
   ngOnDestroy() {
