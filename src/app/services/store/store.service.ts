@@ -21,4 +21,8 @@ export class StoreService {
   setState(data: Store) { 
     this._state = data; 
   } 
+
+  resetStore(){
+    this.setState({username:'',password:'',role:''});
+  }
 }

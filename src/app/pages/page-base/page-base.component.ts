@@ -81,9 +81,8 @@ export class PageBaseComponent {
   }
 
   signOut(){
-    this.store.setState({username:'',password:'',role:''});
+    this.store.resetStore();
     this._store = this.store.getState();
-
   }
 
   ngOnDestroy() {
