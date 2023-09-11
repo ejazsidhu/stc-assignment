@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PageBaseComponent } from './page-base/page-base.component';
 import { MaterialCoreModule } from '../modules/material-core/material-core.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PagesRoutingModule,
     MaterialCoreModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule
   ]
 })
 export class PagesModule { }

@@ -1,0 +1,32 @@
+{
+  "HOME": {
+      "TITLE": "واجب STC",
+      "PRODUCT_LISTING": "قائمة المنتجات",
+      "SEARCH_BY_STRING": "البحث بواسطة النص",
+      "SEARCH_BY_CATEGORY": "البحث بواسطة الفئة",
+      "RESET_SEARCH": "إعادة تعيين البحث",
+      "SIGN_IN": "تسجيل الدخول",
+      "SIGN_OUT": "تسجيل الخروج",
+      "CHOOSE_LANG": "اختيار اللغة",
+      "ARABIC": "العربية",
+      "ENGLISH": "الإنجليزية",
+      "DETAILS": "تفاصيل",
+      "PRICE": "السعر"
+  },
+  "LOGIN": {
+      "TITLE": "تسجيل الدخول لدى STC",
+      "USERNAME": "اسم المستخدم",
+      "PASSWORD": "كلمة المرور",
+      "USERNAME_ERROR": "يجب إدخال اسم المستخدم",
+      "PASSWORD_ERROR": "يجب إدخال كلمة المرور"
+  },
+  "ADMIN": {
+      "PRODUCTS": "المنتجات",
+      "NO": "رقم",
+      "TITLE": "العنوان",
+      "DESCRIPTION": "الوصف",
+      "CATEGORY": "الفئة",
+      "PRICE": "السعر",
+      "ACTIONS": "الإجراءات"
+  }
+}

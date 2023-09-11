@@ -7,6 +7,7 @@ import { ProductAddEditComponent } from './pages/admin/product/product-add-edit/
 import { AuthRoutingModule } from './auth-routing.module';
 import { MaterialCoreModule } from '../modules/material-core/material-core.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AuthRoutingModule,
     MaterialCoreModule,
-     ReactiveFormsModule
+     ReactiveFormsModule,
+     TranslateModule
   ]
 })
 export class AuthModule { }
