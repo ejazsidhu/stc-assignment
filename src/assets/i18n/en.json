@@ -1,0 +1,33 @@
+{
+    "HOME": {
+      "TITLE": "STC Assignment",
+      "PRODUCT_LISTING":"Product Listing",
+      "SEARCH_BY_STRING":"Search by text",
+      "SEARCH_BY_CATEGORY":"Search by category",
+      "RESET_SEARCH":"Reset search",
+      "SIGN_IN":"Sign in",
+      "SIGN_OUT":"Sign out",
+      "CHOOSE_LANG":"Choose Language",
+      "ARABIC":"ARABIC",
+      "ENGLISH":"ENGLISH",
+      "DETAILS":"Details",
+      "PRICE":"Price"
+    },
+    "LOGIN":{
+      "TITLE":"STC lOGIN",
+      "USERNAME":"username",
+      "PASSWORD":"password",
+      "USERNAME_ERROR":"You must enter a username value",
+      "PASSWORD_ERROR":"You must enter a password value"
+    },
+    "ADMIN":{
+      "PRODUCTS":"Products",
+      "NO":"No.",
+      "TITLE":"Title",
+      "DESCRIPTION":"Description",
+      "CATEGORY":"Category",
+      "PRICE":"Price",
+      "ACTIONS":"Actions"
+    }
+  }
+  

@@ -24,7 +24,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatPaginatorModule,
     MatTableModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+
+    
+    
   ],
   exports:[
     MatSlideToggleModule,
