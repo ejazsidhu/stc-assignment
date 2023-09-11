@@ -16,7 +16,15 @@
            
             </ul>
 
-            <div class="collapse navbar-collapse justify-content-end" *ngIf="_store?.username">
+            <div class=" justify-content-end" *ngIf="_store?.username">
+              <!-- <mat-form-field>
+                <mat-label>{{ "HOME.CHOOSE_LANG" | translate }}</mat-label>
+                <mat-select [(ngModel)]="languageSelection" (selectionChange)="LangHelper.changeLangage(languageSelection)">
+                  <mat-option [value]="item" *ngFor="let item of languageList">{{
+                    item
+                  }}</mat-option>
+                </mat-select>
+              </mat-form-field> -->
               <button class="btn btn-outline-info" type="button" (click)="signOut()">{{ "HOME.SIGN_OUT" | translate }}</button>
           </div>
          
