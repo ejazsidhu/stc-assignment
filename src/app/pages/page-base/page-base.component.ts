@@ -40,10 +40,10 @@ export class PageBaseComponent {
 
     this.searchSubscription = this.searchControl.valueChanges
       .pipe(
-        debounceTime(300), // Adjust debounce time as needed (300ms in this example)
-        distinctUntilChanged() // Ensure that the same value is not emitted consecutively
+        // debounceTime(300), // Adjust debounce time as needed (300ms in this example)
+        // distinctUntilChanged() // Ensure that the same value is not emitted consecutively
       )
-      .subscribe(newValue => {
+      .subscribe((newValue:any) => {
         console.log('Search query:', newValue);
         this.products = this.utilityService.searchProducts(newValue ? newValue : '', this.products)
       });
