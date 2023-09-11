@@ -27,7 +27,8 @@
       "DESCRIPTION":"Description",
       "CATEGORY":"Category",
       "PRICE":"Price",
-      "ACTIONS":"Actions"
+      "ACTIONS":"Actions",
+      "PRODUCT_CREATE":"Add Product"
     }
   }
   

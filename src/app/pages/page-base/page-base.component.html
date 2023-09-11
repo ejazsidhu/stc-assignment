@@ -80,7 +80,7 @@
         >
           <mat-form-field>
             <mat-label>{{ "HOME.CHOOSE_LANG" | translate }}</mat-label>
-            <mat-select [(ngModel)]="languageSelection">
+            <mat-select [(ngModel)]="languageSelection" (selectionChange)="LangHelper.changeLangage(languageSelection)">
               <mat-option [value]="item" *ngFor="let item of languageList">{{
                 item
               }}</mat-option>
