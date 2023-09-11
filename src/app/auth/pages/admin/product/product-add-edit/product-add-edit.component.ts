@@ -14,11 +14,12 @@ export class ProductAddEditComponent {
 
   productForm: FormGroup;
   categories: string[];
-  selectedItemId: string;
+  selectedItemId: string | undefined;
   loading: boolean = false;
+  serverUrl:string = Enviroment.SERVER_URL
 
   constructor(private router: Router, private fb: FormBuilder, private httpService: HttpService, private acRoutes: ActivatedRoute) {
-    acRoutes.params.subscribe(p => {
+    acRoutes.params.subscribe((p:any) => {
       console.log('params', p['id'])
       if (p['id']) {
         this.getSingleProduct(p['id']);
